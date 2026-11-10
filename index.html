@@ -2,85 +2,400 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#0b0e1a">
-  <meta name="description" content="Reyon S. — instructional design and eLearning portfolio.">
-  <title>Reyon S. — Learning, by design</title>
+  <title>Reyon S Book Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--bg:#0b0e1a;--paper:#1b2238;--paper2:#232b47;--ink:#f1ede3;--muted:#9ca6c6;--gold:#e6c79a;--gold2:#c9a064;--teal:#1f7f86;--line:rgba(230,199,154,.19);--serif:'Fraunces',Georgia,serif;--sans:'Inter',Arial,sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-color:#586080 var(--bg)}body{margin:0;background:radial-gradient(60% 48% at 12% 45%,rgba(31,127,134,.30),transparent 72%),radial-gradient(55% 48% at 92% 50%,rgba(201,160,100,.2),transparent 72%),var(--bg);color:var(--ink);font-family:var(--sans);min-height:100vh}button{font:inherit;color:inherit}a{color:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:4px} [hidden]{display:none!important}
-    #progress{position:fixed;z-index:60;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));pointer-events:none}
-    .topbar{position:fixed;z-index:30;top:0;left:0;right:0;height:76px;padding:0 max(30px,calc((100vw - 1200px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(230,199,154,.08);background:linear-gradient(180deg,rgba(11,14,26,.86),rgba(11,14,26,.3));backdrop-filter:blur(12px)}.logo{font:500 27px var(--serif);text-decoration:none;letter-spacing:-.04em}.logo span{color:var(--gold)}.nav{display:flex;align-items:center;gap:8px}.nav button{border:0;background:transparent;color:var(--muted);padding:10px 13px;border-radius:20px;cursor:pointer;font-size:12px;transition:color .2s,background .2s}.nav button:hover,.nav button.active{color:var(--gold);background:rgba(230,199,154,.08)}.nav .talk{background:#eeeae3;color:#15182a;font-weight:600;margin-left:8px;padding:11px 17px}.nav .talk:hover{background:#fff;color:#15182a}
-    #track{height:650vh;position:relative}.stage{position:sticky;top:0;height:100vh;height:100svh;min-height:480px;overflow:hidden;perspective:2200px;perspective-origin:50% 43%;display:grid;place-items:center;padding:70px 20px 94px}.ambient{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 56%,rgba(111,92,155,.13),transparent 48%)}.stage::after{content:"";position:absolute;left:0;right:0;bottom:0;height:18%;background:linear-gradient(0deg,rgba(11,14,26,.48),transparent);pointer-events:none}.book-shadow{position:absolute;left:50%;top:56%;width:min(80vw,900px);height:100px;transform:translate(-50%,0);border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.62),transparent 68%);filter:blur(12px)}
-    .book{position:relative;width:min(88vw,960px);aspect-ratio:1.42;transform-style:preserve-3d;will-change:transform;filter:drop-shadow(0 26px 34px rgba(0,0,0,.28));margin-top:-7px}.base{position:absolute;top:0;width:50%;height:100%;overflow:hidden;padding:5.2% 5.2% 5%;font-size:clamp(10px,1.05vw,14px);line-height:1.5;background:linear-gradient(270deg,#10152a 0,#1b2238 8%,#212943 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}#leftBase{left:0;border-radius:14px 0 0 14px;box-shadow:inset 7px 0 16px -12px #fff, inset -12px 0 22px -18px #000}#rightBase{left:50%;border-radius:0 14px 14px 0;background:linear-gradient(90deg,#10152a 0,#1b2238 8%,#212943 100%);box-shadow:inset 12px 0 22px -18px #000,inset -7px 0 16px -12px #fff}
-    .leaf{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;will-change:transform}.face{position:absolute;inset:0;overflow:hidden;padding:5.2% 5.2% 5%;font-size:clamp(10px,1.05vw,14px);line-height:1.48;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}.face.front{border-radius:0 13px 13px 0;background:linear-gradient(90deg,#12172b,#202742 10%,#252d49)}.face.back{transform:rotateY(180deg);border-radius:13px 0 0 13px;background:linear-gradient(270deg,#12172b,#202742 10%,#252d49)}.face::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(2,4,14,.32),transparent 35%);opacity:var(--shade,0)}.face.back::after{background:linear-gradient(270deg,rgba(2,4,14,.32),transparent 35%)}.folio{position:absolute;bottom:4%;font-size:.76em;color:var(--muted);letter-spacing:.08em}.front .folio{right:7%}.back .folio{left:7%}.kicker{margin:0 0 .75em!important;color:var(--gold);font-size:.72em!important;font-weight:600;letter-spacing:.18em;text-transform:uppercase}.kicker b{font:700 1.6em var(--serif);letter-spacing:0;margin-right:.35em}.face h2,.base h2{font:700 2.05em/1.05 var(--serif);letter-spacing:-.035em;margin:.05em 0 .55em}.face h3{font:600 1.12em var(--serif);color:var(--gold);margin:1em 0 .45em}.face p,.base p{margin:0 0 .72em}.muted{color:var(--muted)}
-    .cover{padding:0!important;border-radius:4px 15px 15px 4px!important;background:radial-gradient(120% 80% at 30% 8%,#2a3562,#141a35 56%,#080b19)!important;box-shadow:inset 8px 0 15px -9px rgba(255,255,255,.4),inset -2px -5px 15px rgba(0,0,0,.45),0 0 0 1px rgba(230,199,154,.2)}.cover:before{content:"";position:absolute;inset:4%;border:1px solid rgba(230,199,154,.45);border-radius:8px;pointer-events:none;z-index:3}.cover-copy{position:absolute;z-index:4;inset:10% 7% 8% 10%;display:flex;flex-direction:column;align-items:flex-start}.cover-mark{color:var(--gold);font:500 2em var(--serif)}.cover h1{font:700 clamp(34px,5.1vw,65px)/.98 var(--serif);letter-spacing:-.055em;margin:9% 0 4%;max-width:85%;color:#f3d9aa;text-shadow:0 3px 25px rgba(230,199,154,.15)}.cover-copy>p{max-width:64%;font-size:.92em;color:#c4c9e6;line-height:1.65}.cover-name{margin-top:auto!important;display:grid;gap:3px}.cover-name b{font:600 1.35em var(--serif);color:#fff2d8}.cover-name span{font-size:.82em;color:#aeb6df}.cover-art{position:absolute;right:-7%;bottom:0;height:87%;width:61%;object-fit:cover;object-position:center 22%;mask-image:linear-gradient(180deg,#000 79%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 79%,transparent);filter:drop-shadow(0 0 24px rgba(120,90,200,.25));z-index:2}.initials{width:3.3em;height:3.3em;flex:none;border-radius:50%;display:grid;place-items:center;font:700 1.3em var(--serif);color:var(--gold);background:var(--paper2);box-shadow:inset 0 0 0 1px var(--line)}.intro-row{display:flex;align-items:center;gap:1em}.intro-row h2{margin:0}.chips{display:flex;flex-wrap:wrap;gap:.45em}.chip{padding:.37em .75em;border-radius:2em;font-size:.76em;color:#e8e4d8;background:var(--paper2);box-shadow:inset 0 0 0 1px var(--line)}.chip.strong{color:var(--gold);font-weight:600}
-    .orbit{position:relative;width:100%;height:67%;min-height:160px;margin:.4em auto 0}.ring{position:absolute;left:50%;top:50%;width:72%;aspect-ratio:1;border:1px dashed rgba(230,199,154,.22);border-radius:50%;transform:translate(-50%,-50%)}.ring.outer{width:91%;border-style:solid;border-color:rgba(230,199,154,.1)}.orb-photo{position:absolute;left:50%;top:50%;width:43%;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 24%;transform:translate(-50%,-50%);border:4px solid rgba(230,199,154,.65);box-shadow:0 0 35px rgba(110,95,165,.28)}.orbit-label{position:absolute;left:50%;top:50%;width:2.55em;height:2.55em;margin:-1.275em;border-radius:12px;background:linear-gradient(145deg,#343e69,#1d2748);display:grid;place-items:center;font:700 1em var(--serif);color:#fff;box-shadow:0 8px 18px rgba(0,0,0,.38);animation:float 3s ease-in-out infinite alternate}.orbit-label:nth-of-type(3){--x:0;--y:-2.95em}.orbit-label:nth-of-type(4){--x:2.8em;--y:-2em}.orbit-label:nth-of-type(5){--x:3em;--y:1em}.orbit-label:nth-of-type(6){--x:1em;--y:3em}.orbit-label:nth-of-type(7){--x:-2em;--y:3em}.orbit-label:nth-of-type(8){--x:-3em;--y:0}.orbit-label:nth-of-type(9){--x:-2.5em;--y:-2em}.orbit-label{transform:translate(var(--x,0),var(--y,0))}@keyframes float{to{translate:0 -5px}}
-    .summary{font-size:.91em;line-height:1.62}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.5em;margin-top:1em}.stat{text-align:center;padding:.7em .25em;border-radius:10px;background:rgba(9,13,28,.32);color:var(--muted);font-size:.7em}.stat b{display:block;color:var(--gold);font:700 1.7em var(--serif)}.detail{display:grid;grid-template-columns:5.4em 1fr;gap:.7em;padding:.75em 0;border-top:1px solid var(--line);font-size:.84em}.detail>span{font-size:.75em;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.detail b{display:block;color:var(--ink)}.detail small{color:var(--muted);font-size:.88em}.lang{display:flex;justify-content:space-between;gap:.4em;padding:.13em 0}.lang small{white-space:nowrap}.job{position:relative;border-left:2px solid rgba(230,199,154,.25);padding:0 0 0 1em;margin:0 0 1.05em}.job:before{content:"";position:absolute;left:-.38em;top:.25em;width:.6em;height:.6em;border-radius:50%;background:var(--paper);box-shadow:0 0 0 .15em var(--gold)}.job .date{font-size:.68em;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}.job b{display:block;font:600 1em/1.23 var(--serif);margin:.16em 0}.job .org{font-size:.77em;color:var(--muted)}.job ul{padding-left:1em;margin:.35em 0 0;color:#c5cbe2;font-size:.77em}.job li{margin:.16em 0}.projects{list-style:none;padding:0;margin:.3em 0 .7em}.projects li{display:grid;grid-template-columns:2em 1fr;gap:.1em .45em;padding:.55em 0;border-top:1px solid var(--line)}.projects i{font:italic 700 .95em var(--serif);color:var(--gold);grid-row:span 2}.projects b{font:600 .94em/1.2 var(--serif)}.projects span{font-size:.72em;line-height:1.35;color:var(--muted)}.samples{display:inline-flex;margin-top:.3em;color:var(--gold);font-size:.76em;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px}.contact-list{list-style:none;margin:1em 0 0;padding:0;font-size:.82em}.contact-list li{display:grid;grid-template-columns:5.6em 1fr;gap:.45em;padding:.3em 0}.contact-list .label{font-size:.76em;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}.contact-list a{color:var(--gold);text-decoration:none;overflow-wrap:anywhere}.contact-list a:hover{text-decoration:underline}.contact-note{position:absolute;bottom:8%;left:5.5%;max-width:47%;color:var(--muted);font-size:.7em}.contact-photo{position:absolute;right:0;bottom:0;width:48%;height:62%;object-fit:cover;object-position:center 18%;mask-image:linear-gradient(180deg,#000 80%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent);opacity:.86}.back-cover{padding:0!important;background:radial-gradient(120% 80% at 25% 0%,#2a3562,#141a35 56%,#080b19)!important}.back-cover .band{position:absolute;left:0;top:0;bottom:0;width:10%;background:linear-gradient(180deg,#f3dcae,#d4a762 60%,#b98f4c);display:flex;align-items:center;justify-content:center}.band span{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.68em;letter-spacing:.15em;text-transform:uppercase;color:#1b1608}.back-cover .back-inner{position:absolute;left:17%;right:7%;top:8%;bottom:7%;display:flex;flex-direction:column}.back-cover .portrait-small{width:24%;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:center 22%;margin-left:auto;border:3px solid var(--gold)}.back-cover .word{font:700 clamp(28px,4vw,48px)/1 var(--serif);letter-spacing:.02em;color:#e6c79a;margin-top:6%}.back-cover .tag{font-size:.76em;color:#cfd4ee;letter-spacing:.08em;margin-top:.8em}.back-cover .back-contact{margin-top:auto;font-size:.68em;color:#c4c9e6;line-height:1.7;overflow-wrap:anywhere}.back-cover .back-contact b{color:#fff}.back-cover .mini-logo{margin-top:1em;width:2.5em;height:2.5em;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:700 1em var(--serif);color:var(--gold)}
-    .controls{position:absolute;z-index:20;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);left:0;right:0;display:flex;justify-content:center;align-items:center;gap:14px}.controls button{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:rgba(27,34,56,.82);display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:.2s}.controls button:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}.count{min-width:76px;text-align:center;font:500 15px var(--serif);letter-spacing:.06em}.count span{color:var(--muted)}.hint{position:absolute;z-index:10;bottom:calc(env(safe-area-inset-bottom,0px) + 75px);left:0;right:0;text-align:center;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.scroll-cue{position:absolute;top:calc(76px + 18px);left:0;right:0;text-align:center;color:var(--muted);font-size:10px;letter-spacing:.24em;text-transform:uppercase;opacity:.85}.skip{position:absolute;right:26px;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);z-index:21;border:1px solid rgba(255,255,255,.2);background:rgba(11,14,26,.65);padding:10px 14px;border-radius:22px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(max-width:760px){.topbar{height:66px;padding:0 17px}.logo{font-size:23px}.nav{gap:1px}.nav button{padding:9px 7px;font-size:10px}.nav .talk{margin-left:3px;padding:9px 11px}.stage{padding:75px 8px 95px;perspective:1600px}.book{width:min(96vw,780px);aspect-ratio:1.16;margin-top:-8px}.face,.base{font-size:clamp(8px,2.1vw,12px);padding:5.5% 4.6% 6%}.cover h1{font-size:clamp(25px,6.6vw,48px)}.cover-art{width:64%;height:78%;right:-13%}.cover-copy{inset:9% 5% 8% 8%}.cover-copy>p{max-width:75%;font-size:.82em}.face h2,.base h2{font-size:1.75em}.face h3{font-size:1em}.orbit{min-height:120px}.stats{gap:.25em}.stat{font-size:.63em}.job ul{font-size:.69em}.job{margin-bottom:.75em}.detail{grid-template-columns:4.7em 1fr;gap:.4em}.projects li{grid-template-columns:1.6em 1fr;padding:.4em 0}.contact-list li{grid-template-columns:4.4em 1fr;gap:.25em}.contact-note{max-width:52%;left:5%;font-size:.62em}.back-cover .word{font-size:clamp(22px,5vw,36px)}.scroll-cue{top:73px}.hint{bottom:79px}.controls{bottom:22px}.controls button{width:38px;height:38px}.skip{right:12px;bottom:70px}.book-shadow{top:56%;width:95vw}}
-    @media(max-width:400px){.nav button:not(.talk){display:none}.book{width:98vw}.face,.base{font-size:8px}.cover h1{font-size:27px}.face h2,.base h2{font-size:1.6em}.summary{font-size:.84em}.job .org{font-size:.7em}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+    :root {
+      color-scheme: dark;
+      --bg: #0b0e1a;
+      --paper: #1b2238;
+      --paper2: #232b47;
+      --ink: #f1ede3;
+      --mut: #9ca6c6;
+      --gold: #e6c79a;
+      --gold2: #c9a064;
+      --teal: #1f7f86;
+      --line: rgba(230,199,154,.16);
+      --lo: #0f1428;
+      --hi: #2d3675;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'Inter', Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{
+      font-family:var(--sans);
+      background:
+        radial-gradient(60% 55% at 12% 42%, rgba(31,127,134,.38), transparent 70%),
+        radial-gradient(55% 50% at 92% 60%, rgba(201,160,100,.28), transparent 70%),
+        linear-gradient(180deg, #0b0e1a, #0e1322 58%, #0b0e1a);
+      color:var(--ink);
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit}
+    [hidden]{display:none!important}
+    .topbar{
+      position:fixed;z-index:20;left:0;right:0;top:0;
+      padding: calc(env(safe-area-inset-top,0px) + .8rem) max(1.2rem,env(safe-area-inset-right,0px)) .8rem max(1.2rem,env(safe-area-inset-left,0px));
+      display:flex;align-items:center;justify-content:space-between;
+      background:linear-gradient(180deg, rgba(11,14,26,.84), rgba(11,14,26,.18));
+      backdrop-filter: blur(9px);
+      border-bottom:1px solid rgba(255,255,255,.04);
+    }
+    .logo{font:500 1.7rem var(--serif);color:var(--ink);letter-spacing:.01em;line-height:1}
+    .logo span{color:var(--gold)}
+    .dots{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap}
+    .dots button{
+      border:0;cursor:pointer;background:none;padding:.55rem .82rem;border-radius:2rem;
+      font-size:.85rem;font-weight:500;color:var(--mut);transition:color .2s,background .2s;
+    }
+    .dots button:hover{color:var(--ink)}
+    .dots button.on{color:var(--gold)}
+    .dots .cta{margin-left:.5rem;background:#ece9e4;color:#14182c;font-weight:600;padding:.62rem 1.1rem}
+    .dots .cta:hover{background:#fff;color:#14182c}
+    #bar{
+      position:fixed;z-index:21;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));
+    }
+    #track{height:1800vh;position:relative}
+    .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;perspective:2600px;perspective-origin:50% 38%;display:grid;place-items:center}
+    #rig{position:relative;width:0;height:0;transform-style:preserve-3d;transform:rotateX(16deg) rotateY(-24deg);margin-top:-2.5vh}
+    #book{position:absolute;left:-26em;top:-17.5em;width:52em;height:35em;font-size:16px;transform-style:preserve-3d;will-change:transform;transform:translateX(-208px)}
+    .shadow{position:absolute;left:50%;width:55%;bottom:-2.5em;height:3.4em;background:radial-gradient(ellipse at center, rgba(0,0,0,.62), transparent 68%);filter:blur(.55em);transform:translateZ(-40px)}
+    .leaf{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d}
+    .f,.base{overflow:hidden;padding:2.2em 2.1em 2em;font-size:.9em;line-height:1.45}
+    .f{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+    .fr{border-radius:0 .9em .9em 0;background:linear-gradient(90deg,#10152a 0,var(--paper) 7%,#212943)}
+    .bk{transform:rotateY(180deg);border-radius:.9em 0 0 .9em;background:linear-gradient(270deg,#10152a 0,var(--paper) 7%,#212943)}
+    .f::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(2,4,14,.75),transparent 75%);opacity:var(--sf,0)}
+    .bk::after{background:linear-gradient(270deg,rgba(2,4,14,.75),transparent 75%);opacity:var(--sb,0)}
+    .base{position:absolute;top:0;width:50%;height:100%;background:linear-gradient(270deg,#10152a 0,var(--paper) 7%,#212943)}
+    #bl{left:0;border-radius:.9em 0 0 .9em;opacity:0;box-shadow:-1px 0 0 #aeb4c8,-2px 0 0 #e9ecf4,-3px 0 0 #9aa1b8,-4px 1px 0 #e3e6ef}
+    #br{left:50%;border-radius:0 .9em .9em 0;background:linear-gradient(90deg,#10152a 0,var(--paper) 7%,#212943);box-shadow:1px 0 0 #aeb4c8,2px 0 0 #e9ecf4,3px 0 0 #9aa1b8,4px 1px 0 #e3e6ef,5px 1px 0 rgba(0,0,0,.12)}
+    .cv{padding:0;border-radius:.4em 1em 1em .4em;background:radial-gradient(120% 80% at 30% 8%,#2a3562,#141a35 55%,#080b19);box-shadow:inset .5em 0 .7em -.3em rgba(255,255,255,.14),inset -.2em -.3em .8em rgba(0,0,0,.5)}
+    .cv::before{content:"";position:absolute;inset:1.3em 1.3em 1.3em 1.7em;border:1px solid rgba(230,199,154,.5);border-radius:.5em;pointer-events:none;z-index:2}
+    .cin{position:absolute;inset:3em 2.4em 2.6em 3em;display:flex;flex-direction:column;color:#fff;z-index:3}
+    .cin h1{font:700 3em/1.02 var(--serif);margin:.8em 0 .45em;background:linear-gradient(180deg,#fff2d8,#e6c79a 70%,#b98f4c);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em}
+    .cin p{margin:0;color:#c4c9e6;font-size:.92em;max-width:12.5em}
+    .cn{margin-top:auto;display:flex;flex-direction:column;gap:.05em;max-width:9em}.cn b{font:600 1.2em var(--serif);color:#fff2d8}.cn span{font-size:.82em;color:#aeb6df}
+    .cphoto{position:absolute;right:.9em;bottom:1.35em;width:14.6em;z-index:1;pointer-events:none;filter:drop-shadow(0 0 1.4em rgba(120,90,200,.35)) drop-shadow(0 1em 1.2em rgba(0,0,0,.5))}
+    .cphoto img{display:block;width:100%;height:auto;mask-image:linear-gradient(180deg,#000 82%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent)}
+    .cv.bk{border-radius:1em .4em .4em 1em;box-shadow:inset -.5em 0 .7em -.3em rgba(255,255,255,.12),inset .2em -.3em .8em rgba(0,0,0,.5)}
+    .cv2::before{display:none}
+    .band{position:absolute;left:0;top:0;bottom:0;width:3.4em;z-index:2;background:linear-gradient(180deg,#f3dcae,#d4a762 60%,#b98f4c);display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .band span{writing-mode:vertical-rl;transform:rotate(180deg);font:600 .74em Inter;letter-spacing:.16em;text-transform:uppercase;color:#1b1608;text-align:center}
+    .band .sq{display:grid;gap:.45em}.band .sq i{display:block;width:1.2em;height:1.2em;background:#f7ecd2;opacity:.92}
+    .cl{position:absolute;left:4.7em;right:2.2em;top:2.4em;bottom:2.3em;display:flex;flex-direction:column;color:#fff}
+    .cl .pic{width:8.4em;height:8.4em;flex:none;border-radius:50%;margin:0 0 0 auto;background:#1a1530 url(Polished%203D%20Hijab%20Portrait.png) 50% 12%/158% auto no-repeat;box-shadow:0 0 0 .25em var(--gold),0 0 0 .55em rgba(230,199,154,.16)}
+    .cl .t1{margin-top:1.5em;font:500 1.5em/1 Inter;letter-spacing:.16em;text-transform:uppercase;color:#cfd4ee}
+    .cl .t2{margin-top:.12em;font:700 2.85em/1.05 var(--serif);letter-spacing:.01em;background:linear-gradient(180deg,#fff2d8,#e6c79a 65%,#b98f4c);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .cl .hl{margin-top:.8em;padding:.45em .8em;background:linear-gradient(90deg,#f3dcae,#d4a762);color:#1c1608;font:600 .78em Inter}
+    .cl .ct{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:1em;font-size:.74em;line-height:1.55;color:#c4c9e6}.cl .ct b{color:#fff;font-size:1.1em}.cl .lg{display:grid;justify-items:center;gap:.4em;text-align:center}.cl .lg span{width:3.2em;height:3.2em;border-radius:50%;display:grid;place-items:center;font:700 1.25em var(--serif);color:var(--gold);background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px rgba(230,199,154,.4)}.cl .lg small{color:#c4c9e6;font-size:.7em}.cl .box{margin-top:1.2em;border:1px solid rgba(230,199,154,.55);padding:.6em .9em;display:flex;justify-content:space-between;align-items:center;font:600 1.35em var(--serif);letter-spacing:.05em;color:#fdfaf4}.cl .sq2{display:grid;gap:.25em}.cl .sq2 i{display:block;width:.55em;height:.55em;border:1px solid rgba(230,199,154,.7)}
+    .rb{position:absolute;right:2.2em;top:-.2em;width:1.5em;height:6em;background:linear-gradient(180deg,#e6c79a,#b98f4c);clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);box-shadow:0 .4em .6em rgba(0,0,0,.3)}
+    .f h2,.base h2{font:700 1.75em/1.1 var(--serif);margin:0 0 .5em;letter-spacing:-.01em}
+    .f h3{font:600 1.05em var(--serif);margin:1.1em 0 .5em;color:var(--gold)}
+    .f p,.base p{margin:0 0 .7em}.mut{color:var(--mut)}
+    .kk{font:600 .72em Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 .6em!important}
+    .kk b{font:700 1.5em var(--serif);letter-spacing:0;margin-right:.35em}
+    .pn{position:absolute;bottom:1.2em;margin:0!important;font-size:.8em;color:var(--mut)}
+    .f.bk .pn{left:2.4em}.f.fr .pn,#br .pn{right:2.4em}
+    .mono{width:3.6em;height:3.6em;flex:none;border-radius:50%;display:grid;place-items:center;font:700 1.25em var(--serif);color:var(--gold);background:var(--paper2);box-shadow:inset 0 0 0 1px var(--line)}
+    .chips{display:flex;flex-wrap:wrap;gap:.45em}
+    .tg{padding:.34em .8em;border-radius:2em;font-size:.76em;font-weight:500;color:#e8e4d8;background:var(--paper2);box-shadow:inset 0 0 0 1px var(--line),.15em .15em .4em var(--lo),-.12em -.12em .3em var(--hi)}
+    .tg.b{color:var(--gold);font-weight:600}
+    .st{display:grid;grid-template-columns:repeat(3,1fr);gap:.6em;margin-top:1.1em}
+    .st div{padding:.75em .4em;text-align:center;border-radius:.8em;font-size:.78em;color:var(--mut);box-shadow:inset .2em .2em .5em var(--lo),inset -.15em -.15em .4em var(--hi);line-height:1.25}
+    .st b{display:block;font:700 1.55em var(--serif);color:var(--gold)}
+    .orb{position:relative;width:25em;height:25.6em;margin:.9em auto 0;--mx:0;--my:0}
+    .ring{position:absolute;left:50%;top:50%;border-radius:50%;border:1px dashed rgba(230,199,154,.26);transform:translate(-50%,-50%)}
+    .ring.r1{width:18.6em;height:18.6em}.ring.r2{width:23.6em;height:23.6em;border-style:solid;border-color:rgba(230,199,154,.1)}
+    .ph{position:absolute;left:50%;top:50%;width:11.2em;height:11.2em;margin:-5.6em 0 0 -5.6em;border-radius:50%;background:#1a1530 url(Polished%203D%20Hijab%20Portrait.png) 50% 12%/158% auto no-repeat;box-shadow:0 0 0 .25em var(--gold),0 0 0 .5em rgba(230,199,154,.2)}
+    .ic{position:absolute;left:50%;top:50%;width:3.7em;height:3.7em;margin:-1.85em 0 0 -1.85em;transform:translate(calc(var(--x)*1em + var(--mx)*var(--d)*.9em),calc(var(--y)*1em + var(--my)*var(--d)*.9em));font:700 1.25em var(--serif);border-radius:.95em;color:#fff;box-shadow:0 .5em 1em rgba(0,0,0,.45),inset 0 .3em .25em rgba(255,255,255,.15)}
+    .ic .in{position:relative;display:grid;place-items:center;width:100%;height:100%;border-radius:.95em;cursor:pointer;box-shadow:inset 0 .1em .15em rgba(255,255,255,.2)}
+    .g1{background:linear-gradient(145deg,#ff9a4d,#e2405f)}.g2{background:linear-gradient(145deg,#ff7a45,#c9361f)}.g3{background:linear-gradient(145deg,#4ea4ff,#2a5bd6)}.g4{background:linear-gradient(145deg,#8ea0ff,#4d5ae0)}.g5{background:linear-gradient(145deg,#4de0bf,#1f7f86)}.g6{background:linear-gradient(145deg,#ffda70,#d9a83d)}
+    .dr{display:grid;grid-template-columns:5.8em 1fr;gap:.8em;padding:.9em 0;border-top:1px solid var(--line);font-size:.88em}
+    .dr:first-of-type{margin-top:.8em}
+    .dr>span{color:var(--mut);font-weight:600;font-size:.82em;letter-spacing:.1em;text-transform:uppercase;padding-top:.15em}
+    .dr b{display:block;font-weight:600;color:var(--ink)}.dr small{color:var(--mut);font-size:.9em}
+    .lang{display:flex;align-items:center;justify-content:space-between;gap:.6em;padding:.18em 0}
+    .lang i{display:flex;gap:.22em}.lang i u{width:.62em;height:.62em;border-radius:50%;background:var(--lo);box-shadow:inset 0 0 0 1px var(--line)}.lang i u.on{background:var(--gold);box-shadow:0 0 .7em rgba(230,199,154,.8)}
+    .bt{display:inline-flex;align-items:center;gap:.55em;border:0;cursor:pointer;font-weight:600;font-size:.86em;padding:.8em 1.3em;border-radius:2em;text-decoration:none;color:#241a08;background:linear-gradient(135deg,#f3dcae,#d4a762);box-shadow:0 .4em .8em rgba(0,0,0,.28)}
+    .bt.dk{color:var(--ink);background:var(--paper2);box-shadow:inset 0 0 0 1px var(--line),.15em .2em .5em var(--lo)}
+    .bt svg{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .dlnote{font-size:.78em;color:var(--mut);margin-top:.5em}
+    .job{position:relative;padding:0 0 0 1.2em;margin-bottom:1.1em;border-left:2px solid rgba(230,199,154,.25)}
+    .job::before{content:"";position:absolute;left:-.42em;top:.3em;width:.7em;height:.7em;border-radius:50%;background:var(--paper);box-shadow:0 0 0 .18em var(--gold)}
+    .job .w{font-size:.68em;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+    .job b{display:block;font:600 1.02em/1.25 var(--serif);margin:.15em 0 .1em}.job .o{font-size:.78em;color:var(--mut)}
+    .job ul{margin:.4em 0 0;padding-left:1.05em;font-size:.8em;color:#c5cbe2}.job li{margin-bottom:.22em}
+    .edu{margin-top:1.2em;padding:.8em 1em;border-radius:.9em;font-size:.82em;color:var(--mut);box-shadow:inset .2em .2em .5em var(--lo),inset -.15em -.15em .4em var(--hi)}.edu b{display:block;color:var(--ink)}
+    .pjs{margin:.1em 0 .7em;padding:0;list-style:none}
+    .pjs li{border-top:1px solid var(--line)}
+    .pjs i{font:italic 700 .95em var(--serif);color:var(--gold);grid-row:span 2;padding-top:.05em}
+    .pjs b{font:600 .98em/1.2 var(--serif)}.pjs span{font-size:.74em;line-height:1.35;color:var(--mut)}
+    .rows{margin:1em 0 0;padding:0;list-style:none;font-size:.88em}
+    .rows li{display:flex;align-items:center;gap:.6em;padding:.38em 0;flex-wrap:wrap}
+    .rows a,.rows code{color:var(--gold);text-decoration:none;font:inherit}.rows a:hover{text-decoration:underline}
+    .rows .k{width:6.6em;font-size:.78em;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:600}
+    .cbtn{border:0;cursor:pointer;font-size:.74em;font-weight:600;padding:.3em .8em;border-radius:2em;color:#241a08;background:linear-gradient(135deg,#f3dcae,#d4a762)}
+    .talkbtns{position:absolute;left:2.1em;bottom:2.6em;display:grid;gap:.55em;justify-items:start;z-index:2}
+    .cph{position:absolute;right:.5em;bottom:0;width:12.4em;pointer-events:none;filter:drop-shadow(0 0 1.2em rgba(120,90,200,.3))}
+    .cph img{display:block;width:100%;height:auto;mask-image:linear-gradient(180deg,#000 80%,transparent);-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent)}
+    .bubs{position:absolute;left:2.1em;top:21.6em;width:14em;display:grid;gap:.55em}
+    .bub{font-size:.76em;line-height:1.35;padding:.65em .9em;border-radius:1em;max-width:12em;box-shadow:0 .4em 1em rgba(0,0,0,.35)}
+    .bub.a{background:#eef0f7;color:#1c2140;border-bottom-left-radius:.3em}
+    .bub.b{justify-self:end;background:#cfe9d4;color:#12301c;border-bottom-right-radius:.3em}
+    @media (max-width:760px){.dots button:not(.cta):not(.k){display:none}.dots .cta{margin-left:0}nav .logo{font-size:1.4rem}}
+    @media (prefers-reduced-motion:reduce){.ic .in{animation:none}.ph,.ic{transition:none}}
   </style>
 </head>
 <body>
-  <div id="progress" aria-hidden="true"></div>
-  <header class="topbar"><a class="logo" href="#" aria-label="Reyon S. portfolio home">R<span>.</span>S.</a><nav class="nav" aria-label="Portfolio chapters"><button data-turn="1">Skills</button><button data-turn="2">About</button><button data-turn="3">Experience</button><button data-turn="4">Projects</button><button class="talk" data-turn="4.65">Let’s talk</button></nav></header>
+  <div id="bar"></div>
+  <nav class="topbar" aria-label="Book chapters">
+    <span class="logo">R<span>.</span>S.</span>
+    <div class="dots" id="dots"></div>
+  </nav>
+
   <main id="track">
     <div class="stage">
-      <div class="ambient" aria-hidden="true"></div><div class="book-shadow" aria-hidden="true"></div>
-      <div class="scroll-cue" id="scrollCue">Scroll to open the book</div>
-      <div class="book" id="book" role="region" aria-label="Interactive portfolio book. Scroll, use the arrows, or use the previous and next buttons to turn pages.">
-        <section class="base" id="leftBase" aria-label="Left page"><p class="kicker"><b>01</b> / Introduction</p><div class="intro-row"><div class="initials">RS</div><div><h2>Reyon S</h2><p class="muted">Instructional Designer<br>&amp; eLearning Developer</p></div></div><h3>Skills</h3><div class="chips"><span class="chip strong">Instructional Design</span><span class="chip">Storyboarding</span><span class="chip">Content Curation</span><span class="chip strong">Rise 360</span><span class="chip strong">Storyline 360</span><span class="chip strong">Vyond</span><span class="chip">Training &amp; Facilitation</span><span class="chip">Workshop Facilitation</span><span class="chip">Training Evaluation</span><span class="chip">LMS &amp; SCORM</span><span class="chip">AI imagery</span><span class="chip">Photo enhancement</span></div><span class="folio">01</span></section>
-        <section class="base" id="rightBase" aria-label="Right page"><p class="kicker"><b>08</b> / Let’s connect</p><h2>Let’s talk.</h2><p class="muted">Have a learning, video or creative project in mind? I’d love to hear what you’re building.</p><ul class="contact-list"><li><span class="label">Email</span><a href="mailto:reyonasarudeen@gmail.com">reyonasarudeen@gmail.com</a></li><li><span class="label">WhatsApp</span><a href="https://wa.me/971528562924" target="_blank" rel="noopener">+971 52 856 2924</a></li><li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/reyons3101" target="_blank" rel="noopener">Reyon S</a></li><li><span class="label">Location</span><span>Sharjah, United Arab Emirates</span></li></ul><p class="muted" style="font-size:.72em;margin-top:1em">Open to UAE and remote work.</p><span class="folio">08</span></section>
-        <div class="leaf">
-          <article class="face front cover" aria-label="Portfolio cover"><img class="cover-art" src="Polished%203D%20Hijab%20Portrait.png" alt="Reyon S. portrait illustration"><div class="cover-copy"><div class="cover-mark">✳</div><h1>Learning,<br>by design.</h1><p>Courses, microlearning and interactive modules that people finish.</p><div class="cover-name"><b>Reyon S</b><span>eLearning Designer</span></div></div></article>
-          <article class="face back"><p class="kicker"><b>01</b> / Introduction</p><div class="intro-row"><div class="initials">RS</div><div><h2>Reyon S</h2><p class="muted">Instructional Designer<br>&amp; eLearning Developer</p></div></div><h3>Skills</h3><div class="chips"><span class="chip strong">Instructional Design</span><span class="chip">Storyboarding</span><span class="chip">Content Curation</span><span class="chip strong">Articulate Rise 360</span><span class="chip strong">Articulate Storyline</span><span class="chip strong">Vyond</span><span class="chip">Training &amp; Facilitation</span><span class="chip">Workshop Facilitation</span><span class="chip">Training Evaluation</span><span class="chip">LMS &amp; SCORM</span><span class="chip">AI-generated imagery</span><span class="chip">Photo enhancement</span></div><span class="folio">01</span></article>
-        </div>
-        <div class="leaf">
-          <article class="face front"><p class="kicker" style="text-align:center"><b>02</b> / Skills &amp; tools</p><div class="orbit"><i class="ring outer"></i><i class="ring"></i><img class="orb-photo" src="Polished%203D%20Hijab%20Portrait.png" alt="Portrait of Reyon S"><span class="orbit-label" style="--x:0;--y:-2.8em">V</span><span class="orbit-label" style="--x:2.8em;--y:-1.7em">P</span><span class="orbit-label" style="--x:2.9em;--y:1.2em">R</span><span class="orbit-label" style="--x:.8em;--y:3em">S</span><span class="orbit-label" style="--x:-2em;--y:2.5em">L</span><span class="orbit-label" style="--x:-3em;--y:0">ID</span><span class="orbit-label" style="--x:-2.4em;--y:-2em">360</span></div><p class="muted" style="text-align:center;font-size:.78em">Authoring tools · Facilitation · LMS delivery</p><span class="folio">02</span></article>
-          <article class="face back"><p class="kicker"><b>03</b> / About me</p><h2>Learning people finish and remember.</h2><p class="muted summary">I design learning that people finish and remember. For more than four years I have turned dense subject matter into microlearning, self-paced courses and short explainer videos.</p><p class="muted summary">I start from the performance gap and work backwards, using adult learning principles, Gagné’s events of instruction, Bloom’s taxonomy and Kirkpatrick’s evaluation model.</p><p class="muted summary">I build in Storyline 360, Rise 360 and Vyond, and publish to any LMS through SCORM.</p><div class="stats"><div class="stat"><b>4.5+</b>years in learning</div><div class="stat"><b>3</b>authoring tools</div><div class="stat"><b>UAE</b>and remote clients</div></div><span class="folio">03</span></article>
-        </div>
-        <div class="leaf">
-          <article class="face front"><p class="kicker"><b>04</b> / At a glance</p><h2>The details.</h2><div class="detail"><span>Location</span><div><b>Sharjah, U.A.E.</b><small>Open to UAE and remote work</small></div></div><div class="detail"><span>Languages</span><div><div class="lang">English <small>Fluent</small></div><div class="lang">Tamil <small>Native</small></div><div class="lang">Hindi <small>Intermediate</small></div><div class="lang">Malayalam <small>Basic</small></div></div></div><div class="detail"><span>Education</span><div><b>BA English Literature</b><small>University of Madras, Chennai<br>2017 to 2020</small></div></div><a class="samples" href="Reyon_S_Resume.pdf" download>Download resume ↗</a><span class="folio">04</span></article>
-          <article class="face back"><p class="kicker"><b>05</b> / Work experience</p><h2>Where I have worked.</h2><div class="job"><div class="date">Jun 2026 to present</div><b>Academic Counsellor</b><div class="org">Eaglewings Education · Sharjah, UAE</div><ul><li>Advise students and working professionals on accredited, UAE-compliant degree and certification programmes.</li><li>Manage the enrolment journey from first enquiry through application.</li></ul></div><div class="job"><div class="date">Feb 2024 to Oct 2025</div><b>Content Associate / Instructional Designer</b><div class="org">Firstsource Solutions · Tamil Nadu, India</div><ul><li>Developed self-paced eLearning and virtual instructor-led training using authoring tools and LMS platforms.</li><li>Created storyboards with subject-matter experts and supported editing, QA and review.</li></ul></div><span class="folio">05</span></article>
-        </div>
-        <div class="leaf">
-          <article class="face front"><p class="kicker"><b>06</b> / Work experience</p><div class="job"><div class="date">Jan 2021 to Feb 2024</div><b>Junior Instructional Designer, Content Curator &amp; Soft Skills Trainer</b><div class="org">Larsen &amp; Toubro (EduTech) · India</div><ul><li>Curated and designed content for self-paced and instructor-led programmes.</li><li>Led development teams from storyboard to course delivery.</li><li>Delivered soft skills training and facilitation.</li></ul></div><div class="job"><div class="date">Oct 2020 to Dec 2020</div><b>Internship: Blog &amp; App Description Writer</b><div class="org">Marisomart Technologies · Tamil Nadu, India</div><ul><li>Wrote SEO-optimised blog articles and app descriptions in the brand’s tone.</li></ul></div><span class="folio">06</span></article>
-          <article class="face back"><p class="kicker"><b>07</b> / Projects</p><h2 style="font-size:1.65em">Projects that make an impact.</h2><p class="muted" style="font-size:.79em">Creative work for learning teams and brands, from AI-generated imagery to complete digital learning experiences.</p><ol class="projects"><li><i>01</i><b>AI Product Photography</b><span>Product imagery and visual content.</span></li><li><i>02</i><b>AI Model &amp; Lifestyle Imagery</b><span>AI-assisted model and lifestyle visuals.</span></li><li><i>03</i><b>Photo Enhancement &amp; Retouching</b><span>Image editing and refinements.</span></li><li><i>04</i><b>Rise 360 Course Development</b><span>Digital learning experience development.</span></li><li><i>05</i><b>Vyond Video Development</b><span>Animated explainer video work.</span></li></ol><a class="samples" href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener">View work samples ↗</a><span class="folio">07</span></article>
-        </div>
-        <div class="leaf">
-          <article class="face front"><p class="kicker"><b>08</b> / Let’s connect</p><h2>Let’s <em style="color:var(--gold);font-style:normal">talk.</em></h2><p class="muted" style="font-size:.86em;max-width:95%">Have a product, brand or learning project in mind? I’d love to hear what you’re building.</p><ul class="contact-list"><li><span class="label">Email</span><a href="mailto:reyonasarudeen@gmail.com">reyonasarudeen@gmail.com</a></li><li><span class="label">WhatsApp</span><a href="https://wa.me/971528562924" target="_blank" rel="noopener">+971 52 856 2924</a></li><li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/reyons3101" target="_blank" rel="noopener">Reyon S</a></li><li><span class="label">Location</span><span>Sharjah, United Arab Emirates</span></li></ul><p class="contact-note">Thank you for taking the time to explore my portfolio. I usually reply within 24 hours.</p><img class="contact-photo" src="Polished%203D%20Hijab%20Portrait.png" alt="Illustrated portrait of Reyon S"><span class="folio">08</span></article>
-          <article class="face back back-cover" aria-label="Portfolio back cover"><div class="band"><span>Thank you for reading</span></div><div class="back-inner"><img class="portrait-small" src="Polished%203D%20Hijab%20Portrait.png" alt="Reyon S"><div class="word">PORTFOLIO</div><div class="tag">Instructional Design · Rise 360 · Storyline · Vyond</div><div class="back-contact"><b>Contact</b><br>Sharjah, U.A.E.<br>+971 52 856 2924<br>reyonasarudeen@gmail.com<br>linkedin.com/in/reyons3101</div><div class="mini-logo">RS</div></div></article>
+      <div id="rig">
+        <div id="book">
+          <i class="shadow" aria-hidden="true"></i>
+          <section class="base" id="bl" aria-hidden="true"></section>
+          <section class="base" id="br" aria-hidden="true"></section>
+
+          <div class="leaf">
+            <div class="f fr cv"><div class="rb"></div>
+              <div class="cphoto"><img src="Polished%203D%20Hijab%20Portrait.png" alt="Reyon S portrait" width="760" height="1018"></div>
+              <div class="cin">
+                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#e6c79a" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 6c-2-1.6-5-2-8-1.6v13c3-.4 6 0 8 1.6 2-1.6 5-2 8-1.6V4.4c-3-.4-6 0-8 1.6Z"/><path d="M12 6v12"/></svg>
+                <h1>Learning,<br>by design.</h1>
+                <p>Courses, microlearning and interactive modules that people finish.</p>
+                <div class="cn"><b>Reyon S</b><span>eLearning Designer</span></div>
+              </div>
+            </div>
+            <div class="f bk"><p class="kk"><b>01</b>/ Introduction</p>
+              <div style="display:flex;align-items:center;gap:1em"><div class="mono">RS</div><div><h2 style="margin:0">Reyon S</h2><p class="mut" style="margin:.2em 0 0;font-size:.86em">Instructional Designer &amp; eLearning Developer</p></div></div>
+              <h3>Skills</h3>
+              <div class="chips" id="chips"></div>
+              <p class="pn">1</p>
+            </div>
+          </div>
+
+          <div class="leaf">
+            <div class="f fr">
+              <p class="kk" style="text-align:center"><b>02</b>/ Skills &amp; tools</p>
+              <div class="orb"><i class="ring r2"></i><i class="ring r1"></i><div class="ph" role="img" aria-label="Portrait of Reyon S"></div></div>
+              <p class="pn">2</p>
+            </div>
+            <div class="f big bk">
+              <p class="kk"><b>03</b>/ About me</p>
+              <h2>Learning people finish and remember.</h2>
+              <p class="mut">I design learning that people finish and remember. For more than four years I have turned dense subject matter into microlearning, self-paced courses and short explainer videos.</p>
+              <p class="mut">I start from the performance gap and work backwards, using adult learning principles, Gagné’s events of instruction, Bloom’s taxonomy and Kirkpatrick’s evaluation model.</p>
+              <p class="mut">I build in Storyline 360, Rise 360 and Vyond, and publish to any LMS through SCORM.</p>
+              <div class="st"><div><b>4.5+</b>years in learning</div><div><b>3</b>authoring tools</div><div><b>UAE</b>and remote clients</div></div>
+              <p class="pn">3</p>
+            </div>
+          </div>
+
+          <div class="leaf">
+            <div class="f big fr">
+              <p class="kk"><b>04</b>/ At a glance</p>
+              <h2>The details.</h2>
+              <div class="dr"><span>Location</span><div><b>Sharjah, U.A.E.</b><small>Open to UAE and remote work</small></div></div>
+              <div class="dr"><span>Languages</span><div>
+                <div class="lang">English <small>Fluent</small><i><u class="on"></u><u class="on"></u><u class="on"></u><u class="on"></u></i></div>
+                <div class="lang">Tamil <small>Native</small><i><u class="on"></u><u class="on"></u><u class="on"></u><u class="on"></u></i></div>
+                <div class="lang">Hindi <small>Intermediate</small><i><u class="on"></u><u class="on"></u><u class="on"></u><u></u></i></div>
+                <div class="lang">Malayalam <small>Basic</small><i><u class="on"></u><u class="on"></u><u></u><u></u></i></div></div></div>
+              <div class="dr"><span>Education</span><div><b>BA English Literature</b><small>University of Madras, Chennai<br>2017 to 2020</small></div></div>
+              <div style="margin-top:1.1em"><button class="bt" type="button" onclick="location.href='Reyon_S_Resume.pdf'" aria-label="Download resume"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>Download resume</button><div class="dlnote">Resume available in the repository.</div></div>
+              <p class="pn">4</p>
+            </div>
+            <div class="f big bk">
+              <p class="kk"><b>05</b>/ Work experience</p>
+              <h2>Where I have worked.</h2>
+              <div class="job"><div class="w">Jun 2026 to present</div><b>Academic Counsellor</b><div class="o">Eaglewings Education · Sharjah, UAE</div>
+                <ul><li>Advise students and working professionals on accredited, UAE-compliant degree and certification programmes.</li><li>Manage the enrolment journey from first enquiry to application.</li></ul></div>
+              <div class="job"><div class="w">Feb 2024 to Oct 2025</div><b>Content Associate / Instructional Designer</b><div class="o">Firstsource Solutions · Tamil Nadu, India</div>
+                <ul><li>Built self-paced e-learning and VILT in Storyline, Rise 360, Vyond and LMS platforms.</li><li>Wrote storyboards with SMEs; ran editing, QA and review of scripts, voice-over and video assets.</li></ul></div>
+              <p class="pn">5</p>
+            </div>
+          </div>
+
+          <div class="leaf">
+            <div class="f big fr">
+              <p class="kk"><b>06</b>/ Work experience</p>
+              <div class="job"><div class="w">Jan 2021 to Feb 2024</div><b>Junior Instructional Designer, Content Curator &amp; Soft Skills Trainer</b><div class="o">Larsen &amp; Toubro (EduTech) · India</div>
+                <ul><li>Curated and designed content for self-paced and instructor-led programmes.</li><li>Led development teams from storyboard to course delivery.</li><li>Delivered soft skills training and facilitation.</li></ul></div>
+              <div class="job"><div class="w">Oct 2020 to Dec 2020</div><b>Internship: Blog &amp; App Description Writer</b><div class="o">Marisomart Technologies · Tamil Nadu, India</div>
+                <ul><li>Wrote SEO-optimised blog articles and app descriptions in the brand’s tone.</li></ul></div>
+              <p class="pn">6</p>
+            </div>
+            <div class="f bk">
+              <p class="kk"><b>07</b>/ Projects</p>
+              <h2 style="font-size:1.55em">Projects that make an impact.</h2>
+              <p class="mut" style="font-size:.8em;margin-bottom:.4em">Creative, thoughtful work for learning teams and brands, from AI-generated imagery to complete digital learning experiences.</p>
+              <ol class="pjs">
+                <li><a href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener"><i>01</i><b>AI Product Photography</b><span>Imagery and product content.</span></a></li>
+                <li><a href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener"><i>02</i><b>AI Model &amp; Lifestyle Imagery</b><span>AI visual concepts and moods.</span></a></li>
+                <li><a href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener"><i>03</i><b>Photo Enhancement</b><span>Retouching and image polishing.</span></a></li>
+                <li><a href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener"><i>04</i><b>Rise 360 Courses</b><span>Digital learning modules.</span></a></li>
+                <li><a href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener"><i>05</i><b>Vyond Videos</b><span>Explainer videos and animation.</span></a></li>
+              </ol>
+              <a class="bt" href="https://drive.google.com/drive/folders/1FQZz2kUlW_7mQUHwsZYincfRSFcBNOvc" target="_blank" rel="noopener">View my work samples <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+              <p class="pn">7</p>
+            </div>
+          </div>
+
+          <div class="leaf">
+            <div class="f fr" id="p8">
+              <p class="kk"><b>08</b>/ Let’s connect</p>
+              <h2>Let’s <em style="color:var(--gold);font-style:normal">talk.</em></h2>
+              <p class="mut" style="font-size:.88em;max-width:20em">Have a product, brand or learning project in mind? I’d love to hear what you’re building. I usually reply within 24 hours.</p>
+              <ul class="rows">
+                <li><span class="k">Email</span><code>reyonasarudeen@gmail.com</code></li>
+                <li><span class="k">WhatsApp</span><a href="https://wa.me/971528562924" target="_blank" rel="noopener">+971 52 856 2924</a></li>
+                <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/reyons3101" target="_blank" rel="noopener">Reyon S</a></li>
+                <li><span class="k">Location</span><span>Sharjah, United Arab Emirates</span></li>
+              </ul>
+              <div class="bubs"><div class="bub a">Hi! Thanks for reaching out. Tell me a little about your project.</div><div class="bub b">I’d love to discuss a course or video project.</div></div>
+              <div class="talkbtns">
+                <button class="bt" type="button" onclick="navigator.clipboard?.writeText('reyonasarudeen@gmail.com').catch(()=>{})">Copy my email</button>
+                <button class="bt dk" type="button" onclick="location.href='Reyon_S_Resume.pdf'">Download resume</button>
+              </div>
+              <div class="cph"><img src="Polished%203D%20Hijab%20Portrait.png" alt="Reyon portrait" width="760" height="1018"></div>
+              <p class="pn" style="right:auto;left:auto;display:none">8</p>
+            </div>
+            <div class="f bk cv cv2" aria-label="Closing cover">
+              <div class="band"><span>Thank you for reading</span><div class="sq"><i></i><i></i><i></i></div></div>
+              <div class="cl">
+                <div class="pic" role="img" aria-label="Reyon S"></div>
+                <div class="t1">eLearning</div>
+                <div class="t2">PORTFOLIO</div>
+                <div class="hl">Instructional Design · Rise 360 · Storyline · Vyond</div>
+                <div class="ct">
+                  <div><b>Contact:</b><br>Sharjah, U.A.E.<br>+971 52 856 2924<br>reyonasarudeen@gmail.com<br>linkedin.com/in/reyons3101</div>
+                  <div class="lg"><span>RS</span><small>Learning,<br>by design.</small></div>
+                </div>
+                <div class="box"><span>PORTFOLIO</span><span class="sq2"><i></i><i></i><i></i></span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="hint" id="hint">Scroll or use the arrows to turn pages</p>
-      <button class="skip" id="skip" type="button">Skip to portfolio</button>
-      <div class="controls"><button id="prev" type="button" aria-label="Previous page"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><output class="count" id="count" aria-live="polite">COVER <span>// 08</span></output><button id="next" type="button" aria-label="Next page"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+      <div class="ctl"><button id="prev" type="button" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button><output id="count" aria-live="polite">COVER <i>// 08</i></output><button id="next" type="button" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button></div>
+      <div class="hint" id="hint">Scroll to open the book</div>
+      <button id="skip" class="skip" type="button">Skip intro</button>
     </div>
   </main>
+
   <script>
-    (()=>{
-      const track=document.getElementById('track'),book=document.getElementById('book'),leaves=[...document.querySelectorAll('.leaf')],bar=document.getElementById('progress'),count=document.getElementById('count'),nav=[...document.querySelectorAll('[data-turn]')],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const pageLabels=['COVER','SKILLS','ABOUT','DETAILS','EXPERIENCE','BACKGROUND','PROJECTS','CONTACT','THANK YOU'];let progress=0,raf=0;
-      const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
-      function paint(){raf=0;const top=track.getBoundingClientRect().top+scrollY,max=Math.max(1,track.offsetHeight-innerHeight);progress=clamp((scrollY-top)/max,0,1);const turns=progress*leaves.length;
-        leaves.forEach((leaf,i)=>{const f=clamp(turns-i,0,1),angle=f*180;leaf.style.transform=`translateZ(${f*2}px) rotateY(${-angle}deg)`;leaf.style.zIndex=String(f>.5?20+i:20-i);leaf.style.setProperty('--shade',String(Math.sin(f*Math.PI)*.55))});
-        bar.style.width=`${progress*100}%`;const page=clamp(Math.round(progress*8),0,8);count.innerHTML=`${pageLabels[page]} <span>// 08</span>`;nav.forEach(n=>n.classList.toggle('active',Math.round(Number(n.dataset.turn))===page));document.getElementById('hint').style.opacity=progress>.99?'0':'.88';document.getElementById('scrollCue').style.opacity=progress>.015?'0':'.85';
-      }
-      function update(){if(!raf)raf=requestAnimationFrame(paint)}
-      function go(turn){const start=track.getBoundingClientRect().top+scrollY,max=Math.max(1,track.offsetHeight-innerHeight),p=clamp(Number(turn)/leaves.length,0,1);scrollTo({top:start+p*max,behavior:reduce?'auto':'smooth'})}
-      nav.forEach(n=>n.addEventListener('click',()=>go(n.dataset.turn)));
-      document.getElementById('prev').addEventListener('click',()=>go(Math.max(0,Math.round(progress*leaves.length)-1)));
-      document.getElementById('next').addEventListener('click',()=>go(Math.min(leaves.length,Math.round(progress*leaves.length)+1)));
-      document.getElementById('skip').addEventListener('click',()=>go(.15));
-      addEventListener('scroll',update,{passive:true});addEventListener('resize',update);addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==='ArrowRight')go(Math.min(leaves.length,Math.round(progress*leaves.length)+1));if(e.key==='ArrowLeft')go(Math.max(0,Math.round(progress*leaves.length)-1))});
-      paint();
-    })();
+    const labels = ['COVER','SKILLS','ABOUT','DETAILS','EXPERIENCE','PROJECTS','CONTACT','END'];
+    const track = document.getElementById('track');
+    const book = document.getElementById('book');
+    const leaves = [...document.querySelectorAll('.leaf')];
+    const progressEl = document.getElementById('bar');
+    const countEl = document.getElementById('count');
+    const dotsWrap = document.getElementById('dots');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const skipBtn = document.getElementById('skip');
+    const hintEl = document.getElementById('hint');
+    const leftBase = document.getElementById('bl');
+    const rightBase = document.getElementById('br');
+    const chapters = ['1','2','3','4','5','6','7','8'];
+
+    const chipSet = ['Instructional Design','Rise 360','Storyline 360','Vyond','LMS','SCORM','Storyboarding','Train the Trainer','Workshop Facilitation','AI Imagery'];
+    const chips = document.getElementById('chips');
+    chipSet.forEach((txt, i) => {
+      const sp = document.createElement('span');
+      sp.className = 'tg' + (i % 3 === 0 ? ' b' : '');
+      sp.textContent = txt;
+      chips.appendChild(sp);
+    });
+
+    let progress = 0;
+    function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
+
+    function updateBook() {
+      const max = Math.max(1, track.offsetHeight - window.innerHeight);
+      const raw = clamp(window.scrollY / max, 0, 1);
+      progress = raw;
+      const turns = raw * leaves.length;
+      const bookX = -progress * 240;
+      const bookY = -2 + progress * 2;
+      const tiltX = 16 - progress * 7;
+      const tiltY = -24 + progress * 15;
+      book.style.transform = `translate(${bookX}px, ${bookY}px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+
+      leaves.forEach((leaf, i) => {
+        const t = clamp(turns - i, 0, 1);
+        const ang = t * 180;
+        const shift = (i + 1) * 1.5 + Math.sin(t * Math.PI) * 26;
+        leaf.style.transform = `translateZ(${shift}px) rotateY(${-ang}deg) skewY(${-Math.sin(t * Math.PI) * 1.6}deg)`;
+        leaf.style.setProperty('--sf', ang < 90 ? (Math.sin(t * Math.PI) * .6) : 0);
+        leaf.style.setProperty('--sb', ang > 90 ? (Math.sin(t * Math.PI) * .6) : 0);
+      });
+
+      leftBase.style.opacity = clamp((raw * 22) - 0.2, 0, 1);
+      rightBase.style.opacity = clamp(1 - raw * 1.8, 0, 1);
+      document.getElementById('bar').style.width = `${raw * 100}%`;
+      const pageIndex = clamp(Math.round(raw * (labels.length - 1)), 0, labels.length - 1);
+      countEl.innerHTML = `${labels[pageIndex]} <i>// ${chapters[pageIndex] || '8'}</i>`;
+      hintEl.style.opacity = raw > 0.12 ? 0 : 1;
+      skipBtn.style.opacity = raw > 0.12 ? 0 : 1;
+
+      const nav = [...document.querySelectorAll('.dots button')];
+      nav.forEach((button) => {
+        const v = Number(button.dataset.page || 0);
+        button.classList.toggle('on', pageIndex === v || (pageIndex >= 7 && v === 7));
+      });
+    }
+
+    function createNavDots() {
+      const names = ['Cover','Skills','About','Details','Experience','Projects','Contact','End'];
+      names.forEach((name, index) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.dataset.page = String(index);
+        b.textContent = name;
+        b.addEventListener('click', () => {
+          const target = index / (names.length - 1);
+          window.scrollTo({ top: target * (track.offsetHeight - innerHeight), behavior: 'smooth'});
+        });
+        dotsWrap.appendChild(b);
+      });
+      const cta = document.createElement('button');
+      cta.type = 'button';
+      cta.className = 'cta';
+      cta.textContent = 'Let’s talk';
+      cta.addEventListener('click', () => {
+        window.scrollTo({ top: 0.92 * (track.offsetHeight - innerHeight), behavior: 'smooth'});
+      });
+      dotsWrap.appendChild(cta);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      const nextProgress = clamp(progress - 0.12, 0, 1);
+      window.scrollTo({ top: nextProgress * (track.offsetHeight - innerHeight), behavior: 'smooth'});
+    });
+    nextBtn.addEventListener('click', () => {
+      const nextProgress = clamp(progress + 0.12, 0, 1);
+      window.scrollTo({ top: nextProgress * (track.offsetHeight - innerHeight), behavior: 'smooth'});
+    });
+    skipBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0.14 * (track.offsetHeight - innerHeight), behavior: 'smooth'});
+    });
+    window.addEventListener('scroll', updateBook, { passive: true });
+    window.addEventListener('resize', updateBook);
+    createNavDots();
+    updateBook();
   </script>
 </body>
 </html>
