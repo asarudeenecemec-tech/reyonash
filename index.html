@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ef">
+  <meta name="description" content="The portfolio of Reyon S. Explore the portfolio archive and résumé.">
+  <title>Reyon S. — Portfolio</title>
+  <style>
+    :root{--ink:#20211f;--muted:#6d6d68;--paper:#f7f4ef;--cream:#eee8df;--accent:#a76b5c;--line:rgba(32,33,31,.14);--serif:Georgia,'Times New Roman',serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}a{color:inherit} .wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-family:var(--serif);font-size:23px;text-decoration:none;letter-spacing:-.04em}.brand span{color:var(--accent)}nav{display:flex;gap:32px}nav a{font-size:12px;letter-spacing:.11em;text-transform:uppercase;text-decoration:none;color:var(--muted)}nav a:hover{color:var(--accent)}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:6%;padding:76px 0 84px}.eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:650}.hero h1{font:clamp(62px,8vw,112px)/.95 var(--serif);letter-spacing:-.065em;margin:23px 0 28px}.hero h1 em{font-weight:400;color:var(--accent)}.intro{max-width:480px;color:var(--muted);font-size:16px;line-height:1.85}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:10px;font-weight:650;border:1px solid var(--ink);transition:.2s}.button.primary{background:var(--ink);color:white}.button:hover{background:var(--accent);border-color:var(--accent);color:white}.portrait{position:relative;max-width:450px;justify-self:end;width:100%;padding:18px 18px 48px;background:var(--cream)}.portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%}.portrait figcaption{position:absolute;bottom:15px;left:20px;font:italic 14px var(--serif);color:var(--muted)}
+    section{padding:94px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px}.section-head h2{font:clamp(38px,5vw,62px)/1 var(--serif);letter-spacing:-.05em;margin:12px 0 0}.section-head p{max-width:380px;color:var(--muted);font-size:14px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:start}.about-copy{font:clamp(22px,3vw,34px)/1.4 var(--serif);letter-spacing:-.025em;margin:0}.about-note{color:var(--muted);font-size:14px;line-height:1.9;margin:0}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.card{background:#fff;border:1px solid var(--line);padding:30px;min-height:245px;display:flex;flex-direction:column;justify-content:space-between}.card-number{font-size:11px;letter-spacing:.16em;color:var(--accent)}.card h3{font:32px/1.1 var(--serif);letter-spacing:-.04em;margin:22px 0 10px}.card p{font-size:13px;color:var(--muted);margin:0}.card-link{margin-top:24px;text-decoration:none;font-size:11px;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid var(--accent);width:max-content;padding-bottom:5px}.contact{background:var(--ink);color:var(--paper);padding:72px 8%;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact h2{font:clamp(38px,5vw,62px)/1 var(--serif);letter-spacing:-.05em;margin:10px 0}.contact p{color:#c4c0b9;margin:0;font-size:14px}.contact .button{border-color:var(--paper);color:var(--paper);white-space:nowrap}footer{padding:24px 0;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px}
+    @media(max-width:760px){.wrap{width:min(100% - 36px,600px)}header{height:70px}nav{gap:14px}nav a{font-size:10px}.hero{grid-template-columns:1fr;gap:45px;padding:68px 0}.hero-copy{order:1}.portrait{order:2;justify-self:center;max-width:390px}.hero h1{font-size:clamp(64px,15vw,94px)}section{padding:70px 0}.about-grid{grid-template-columns:1fr;gap:24px}.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:20px}.contact{padding:44px 28px;display:block}.contact .button{margin-top:24px}footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#top" aria-label="Reyon S. home">Reyon<span>.</span></a>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Portfolio</a><a href="#resume">Résumé</a></nav>
+    </header>
+    <main id="top">
+      <section class="hero" style="border:0">
+        <div class="hero-copy">
+          <div class="eyebrow">Personal portfolio</div>
+          <h1>Reyon<br><em>S.</em></h1>
+          <p class="intro">Welcome to my portfolio. This page brings together the portfolio materials and résumé shared in the repository.</p>
+          <div class="actions"><a class="button primary" href="Reyon%20S%20Book%20Portfolio%20(1).zip" download>View portfolio archive</a><a class="button" href="#about">Discover more</a></div>
+        </div>
+        <figure class="portrait">
+          <img src="Polished%203D%20Hijab%20Portrait.png" alt="Polished 3D hijab portrait artwork included with the portfolio materials">
+          <figcaption>Selected visual from the supplied materials</figcaption>
+        </figure>
+      </section>
+      <section id="about">
+        <div class="section-head"><div><div class="eyebrow">A little introduction</div><h2>About</h2></div><p>A simple home for the documents and creative material included with this portfolio.</p></div>
+        <div class="about-grid">
+          <p class="about-copy">A thoughtful collection of work, presented with room for the story behind it.</p>
+          <p class="about-note">The repository includes a portfolio archive, a résumé, and a portrait image. I’ve kept this page focused on those supplied materials rather than adding unverified biography, job history, or contact details. Open the portfolio archive to explore the original collection, or download the résumé below.</p>
+        </div>
+      </section>
+      <section id="work">
+        <div class="section-head"><div><div class="eyebrow">Explore the materials</div><h2>Portfolio & résumé</h2></div><p>Open the supplied portfolio package or save a copy of the résumé.</p></div>
+        <div class="cards">
+          <article class="card"><div><div class="card-number">01 / PORTFOLIO</div><h3>Book Portfolio</h3><p>Open or download the portfolio archive provided in the repository.</p></div><a class="card-link" href="Reyon%20S%20Book%20Portfolio%20(1).zip" download>Download archive ↗</a></article>
+          <article class="card" id="resume"><div><div class="card-number">02 / RÉSUMÉ</div><h3>Reyon S.</h3><p>The résumé document supplied with the repository.</p></div><a class="card-link" href="Reyon_S_Resume.pdf" download>Download résumé ↗</a></article>
+        </div>
+      </section>
+      <section style="border:0;padding-top:0">
+        <div class="contact"><div><div class="eyebrow">Say hello</div><h2>Let’s connect.</h2><p>Find me on GitHub or get in touch using the contact details in my résumé.</p></div><a class="button" href="https://github.com/asarudeenecemec-tech" target="_blank" rel="noopener noreferrer">GitHub profile ↗</a></div>
+      </section>
+    </main>
+    <footer><span>© <span id="year"></span> Reyon S.</span><span>Made from the materials supplied in this repository.</span></footer>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
